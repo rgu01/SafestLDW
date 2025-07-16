@@ -1,0 +1,1278 @@
+{
+  "V": 2,
+  "name": "AD",
+  "version": "V1",
+  "author": "Rong Gu",
+  "department": "MDU",
+  "description": "This is a use case study of autonomous driving - lane departure warning",
+  "project_type": "advance",
+  "loaded_models": [
+    "b328041eed5c4392a2eafe325c31cbb9"
+  ],
+  "models": [
+    {
+      "V": 2,
+      "id": "b328041eed5c4392a2eafe325c31cbb9",
+      "version": "2",
+      "author": "Rong Gu",
+      "memos": [],
+      "description": "Lane departure warning",
+      "name": "LDW",
+      "dynamic": true,
+      "time_bound": "50",
+      "time_units": "hours",
+      "parameter_set": null,
+      "attribute_set": null,
+      "pages": [
+        {
+          "V": 2,
+          "id": "1",
+          "name": "MainPage",
+          "type": "main",
+          "description": "",
+          "dft": {
+            "V": 2,
+            "nodes": [
+              {
+                "V": 2,
+                "data": {
+                  "id": "20250716073531000084",
+                  "name": "l1",
+                  "title": "No oscillating torque provided for haptic feedback",
+                  "type": "or",
+                  "color": "",
+                  "tag_date": "",
+                  "description": "",
+                  "attributes": [],
+                  "memos": [],
+                  "parents": [],
+                  "children": [
+                    "20250716073614111745"
+                  ],
+                  "toplevel": true,
+                  "relevant": false
+                },
+                "position": {
+                  "x": -510,
+                  "y": 330
+                },
+                "group": "nodes"
+              },
+              {
+                "V": 2,
+                "data": {
+                  "id": "20250716073614111745",
+                  "name": "l2",
+                  "title": "Power steering ECU fails to provide oscillating torque",
+                  "type": "or",
+                  "color": "",
+                  "tag_date": "",
+                  "description": "",
+                  "attributes": [],
+                  "memos": [],
+                  "parents": [
+                    "20250716073531000084"
+                  ],
+                  "children": [
+                    "20250716073642394502",
+                    "20250716073652880720",
+                    "20250716073649216769"
+                  ],
+                  "toplevel": false,
+                  "relevant": false
+                },
+                "position": {
+                  "x": -510,
+                  "y": 590
+                },
+                "group": "nodes"
+              },
+              {
+                "V": 2,
+                "data": {
+                  "id": "20250716073642394502",
+                  "name": "l3",
+                  "title": "Input fault",
+                  "type": "or",
+                  "color": "",
+                  "tag_date": "",
+                  "description": "",
+                  "attributes": [],
+                  "memos": [],
+                  "parents": [
+                    "20250716073614111745"
+                  ],
+                  "children": [
+                    "20250716074613127378"
+                  ],
+                  "toplevel": false,
+                  "relevant": false
+                },
+                "position": {
+                  "x": -1010,
+                  "y": 830
+                },
+                "group": "nodes"
+              },
+              {
+                "V": 2,
+                "data": {
+                  "id": "20250716073649216769",
+                  "name": "l4",
+                  "title": "Hardware fault",
+                  "type": "or",
+                  "color": "",
+                  "tag_date": "",
+                  "description": "",
+                  "attributes": [],
+                  "memos": [],
+                  "parents": [
+                    "20250716073614111745"
+                  ],
+                  "children": [
+                    "20250716080103590498",
+                    "20250716082529274181"
+                  ],
+                  "toplevel": false,
+                  "relevant": false
+                },
+                "position": {
+                  "x": 110,
+                  "y": 810
+                },
+                "group": "nodes"
+              },
+              {
+                "V": 2,
+                "data": {
+                  "id": "20250716073652880720",
+                  "name": "l5",
+                  "title": "Internal fault",
+                  "type": "and",
+                  "color": "",
+                  "tag_date": "",
+                  "description": "",
+                  "attributes": [],
+                  "memos": [],
+                  "parents": [
+                    "20250716073614111745"
+                  ],
+                  "children": [
+                    "20250716082240788913",
+                    "20250716082241455582"
+                  ],
+                  "toplevel": false,
+                  "relevant": false
+                },
+                "position": {
+                  "x": -510,
+                  "y": 810
+                },
+                "group": "nodes"
+              },
+              {
+                "V": 2,
+                "data": {
+                  "id": "20250716074613127378",
+                  "name": "l6",
+                  "title": "LDW logic fails to send vibration command",
+                  "type": "or",
+                  "color": "",
+                  "tag_date": "",
+                  "description": "",
+                  "attributes": [],
+                  "memos": [],
+                  "parents": [
+                    "20250716073642394502"
+                  ],
+                  "children": [
+                    "20250716074750291421",
+                    "20250716074756713268",
+                    "20250716074752849275"
+                  ],
+                  "toplevel": false,
+                  "relevant": false
+                },
+                "position": {
+                  "x": -1010,
+                  "y": 1130
+                },
+                "group": "nodes"
+              },
+              {
+                "V": 2,
+                "data": {
+                  "id": "20250716074750291421",
+                  "name": "l7",
+                  "title": "Input fault",
+                  "type": "or",
+                  "color": "",
+                  "tag_date": "",
+                  "description": "",
+                  "attributes": [],
+                  "memos": [],
+                  "parents": [
+                    "20250716074613127378"
+                  ],
+                  "children": [
+                    "20250716074926725056",
+                    "20250716074942361873"
+                  ],
+                  "toplevel": false,
+                  "relevant": false
+                },
+                "position": {
+                  "x": -1490,
+                  "y": 1330
+                },
+                "group": "nodes"
+              },
+              {
+                "V": 2,
+                "data": {
+                  "id": "20250716074752849275",
+                  "name": "l8",
+                  "title": "Hardware fault",
+                  "type": "or",
+                  "color": "",
+                  "tag_date": "",
+                  "description": "",
+                  "attributes": [],
+                  "memos": [],
+                  "parents": [
+                    "20250716074613127378",
+                    "20250716081257232361"
+                  ],
+                  "children": [
+                    "20250716082009768355",
+                    "20250716080103590498"
+                  ],
+                  "toplevel": false,
+                  "relevant": false
+                },
+                "position": {
+                  "x": -490,
+                  "y": 1330
+                },
+                "group": "nodes"
+              },
+              {
+                "V": 2,
+                "data": {
+                  "id": "20250716074756713268",
+                  "name": "l9",
+                  "title": "Internal fault",
+                  "type": "and",
+                  "color": "",
+                  "tag_date": "",
+                  "description": "",
+                  "attributes": [],
+                  "memos": [],
+                  "parents": [
+                    "20250716074613127378"
+                  ],
+                  "children": [
+                    "20250716081833662648",
+                    "20250716081834336087"
+                  ],
+                  "toplevel": false,
+                  "relevant": false
+                },
+                "position": {
+                  "x": -1010,
+                  "y": 1330
+                },
+                "group": "nodes"
+              },
+              {
+                "V": 2,
+                "data": {
+                  "id": "20250716074926725056",
+                  "name": "l10",
+                  "title": "Lane detection fault",
+                  "type": "or",
+                  "color": "",
+                  "tag_date": "",
+                  "description": "",
+                  "attributes": [],
+                  "memos": [],
+                  "parents": [
+                    "20250716074750291421"
+                  ],
+                  "children": [
+                    "20250716075029134137"
+                  ],
+                  "toplevel": false,
+                  "relevant": false
+                },
+                "position": {
+                  "x": -1870,
+                  "y": 1590
+                },
+                "group": "nodes"
+              },
+              {
+                "V": 2,
+                "data": {
+                  "id": "20250716074942361873",
+                  "name": "l11",
+                  "title": "Driver input fault",
+                  "type": "and",
+                  "color": "",
+                  "tag_date": "",
+                  "description": "",
+                  "attributes": [],
+                  "memos": [],
+                  "parents": [
+                    "20250716074750291421"
+                  ],
+                  "children": [
+                    "20250716081546695846",
+                    "20250716081551278585"
+                  ],
+                  "toplevel": false,
+                  "relevant": false
+                },
+                "position": {
+                  "x": -1490,
+                  "y": 1590
+                },
+                "group": "nodes"
+              },
+              {
+                "V": 2,
+                "data": {
+                  "id": "20250716075029134137",
+                  "name": "l12",
+                  "title": "No or incorrect detection of lane markers",
+                  "type": "or",
+                  "color": "",
+                  "tag_date": "",
+                  "description": "",
+                  "attributes": [],
+                  "memos": [],
+                  "parents": [
+                    "20250716074926725056"
+                  ],
+                  "children": [
+                    "20250716075125020830",
+                    "20250716075129453094",
+                    "20250716075126313716",
+                    "20250716075131713513"
+                  ],
+                  "toplevel": false,
+                  "relevant": false
+                },
+                "position": {
+                  "x": -1870,
+                  "y": 1890
+                },
+                "group": "nodes"
+              },
+              {
+                "V": 2,
+                "data": {
+                  "id": "20250716075125020830",
+                  "name": "l13",
+                  "title": "Environmental input",
+                  "type": "and",
+                  "color": "",
+                  "tag_date": "",
+                  "description": "",
+                  "attributes": [],
+                  "memos": [],
+                  "parents": [
+                    "20250716075029134137"
+                  ],
+                  "children": [
+                    "20250716075559105697",
+                    "20250716075600084885"
+                  ],
+                  "toplevel": false,
+                  "relevant": false
+                },
+                "position": {
+                  "x": -2650,
+                  "y": 2050
+                },
+                "group": "nodes"
+              },
+              {
+                "V": 2,
+                "data": {
+                  "id": "20250716075126313716",
+                  "name": "l14",
+                  "title": "Lane detection internal fault",
+                  "type": "and",
+                  "color": "",
+                  "tag_date": "",
+                  "description": "",
+                  "attributes": [],
+                  "memos": [],
+                  "parents": [
+                    "20250716075029134137"
+                  ],
+                  "children": [
+                    "20250716081119179246",
+                    "20250716081120408212"
+                  ],
+                  "toplevel": false,
+                  "relevant": false
+                },
+                "position": {
+                  "x": -1430,
+                  "y": 2110
+                },
+                "group": "nodes"
+              },
+              {
+                "V": 2,
+                "data": {
+                  "id": "20250716075129453094",
+                  "name": "l15",
+                  "title": "Camera sensor failure",
+                  "type": "or",
+                  "color": "",
+                  "tag_date": "",
+                  "description": "",
+                  "attributes": [],
+                  "memos": [],
+                  "parents": [
+                    "20250716075029134137"
+                  ],
+                  "children": [
+                    "20250716075845091020",
+                    "20250716075848177517"
+                  ],
+                  "toplevel": false,
+                  "relevant": false
+                },
+                "position": {
+                  "x": -2150,
+                  "y": 2070
+                },
+                "group": "nodes"
+              },
+              {
+                "V": 2,
+                "data": {
+                  "id": "20250716075131713513",
+                  "name": "l16",
+                  "title": "Hardware error",
+                  "type": "be",
+                  "color": "",
+                  "tag_date": "",
+                  "description": "",
+                  "attributes": [],
+                  "memos": [],
+                  "parents": [
+                    "20250716075029134137",
+                    "20250716081257232361"
+                  ],
+                  "distribution": "const",
+                  "failed": false,
+                  "string": "Failed: False",
+                  "dorm": "0",
+                  "toplevel": false,
+                  "relevant": false
+                },
+                "position": {
+                  "x": -850,
+                  "y": 2070
+                },
+                "group": "nodes"
+              },
+              {
+                "V": 2,
+                "data": {
+                  "id": "20250716075559105697",
+                  "name": "l17",
+                  "title": "Adversary environmental conditions",
+                  "type": "be",
+                  "color": "",
+                  "tag_date": "",
+                  "description": "",
+                  "attributes": [],
+                  "memos": [],
+                  "parents": [
+                    "20250716075125020830"
+                  ],
+                  "distribution": "probability",
+                  "prob": "0.05",
+                  "string": "ρ: 0.05",
+                  "dorm": "0",
+                  "toplevel": false,
+                  "relevant": false
+                },
+                "position": {
+                  "x": -2770,
+                  "y": 2250
+                },
+                "group": "nodes"
+              },
+              {
+                "V": 2,
+                "data": {
+                  "id": "20250716075600084885",
+                  "name": "l18",
+                  "title": "LDW availability safety mechanism failure",
+                  "type": "be",
+                  "color": "",
+                  "tag_date": "",
+                  "description": "",
+                  "attributes": [],
+                  "memos": [],
+                  "parents": [
+                    "20250716075125020830"
+                  ],
+                  "distribution": "exponential",
+                  "rate": "1",
+                  "string": "Exp (λ: 1)",
+                  "dorm": "0",
+                  "toplevel": false,
+                  "relevant": false
+                },
+                "position": {
+                  "x": -2530,
+                  "y": 2250
+                },
+                "group": "nodes"
+              },
+              {
+                "V": 2,
+                "data": {
+                  "id": "20250716075845091020",
+                  "name": "l19",
+                  "title": "Camera sensor internal fault",
+                  "type": "and",
+                  "color": "",
+                  "tag_date": "",
+                  "description": "",
+                  "attributes": [],
+                  "memos": [],
+                  "parents": [
+                    "20250716075129453094"
+                  ],
+                  "children": [
+                    "20250716075942164276",
+                    "20250716075943593666"
+                  ],
+                  "toplevel": false,
+                  "relevant": false
+                },
+                "position": {
+                  "x": -2310,
+                  "y": 2230
+                },
+                "group": "nodes"
+              },
+              {
+                "V": 2,
+                "data": {
+                  "id": "20250716075848177517",
+                  "name": "l20",
+                  "title": "Camera sensor hardware fault",
+                  "type": "or",
+                  "color": "",
+                  "tag_date": "",
+                  "description": "",
+                  "attributes": [],
+                  "memos": [],
+                  "parents": [
+                    "20250716075129453094"
+                  ],
+                  "children": [
+                    "20250716080823294771",
+                    "20250716080103590498"
+                  ],
+                  "toplevel": false,
+                  "relevant": false
+                },
+                "position": {
+                  "x": -1810,
+                  "y": 2390
+                },
+                "group": "nodes"
+              },
+              {
+                "V": 2,
+                "data": {
+                  "id": "20250716075942164276",
+                  "name": "l21",
+                  "title": "Camera sensor internal software error",
+                  "type": "be",
+                  "color": "",
+                  "tag_date": "",
+                  "description": "",
+                  "attributes": [],
+                  "memos": [],
+                  "parents": [
+                    "20250716075845091020"
+                  ],
+                  "distribution": "probability",
+                  "prob": "0.01",
+                  "string": "ρ: 0.01",
+                  "dorm": "0",
+                  "toplevel": false,
+                  "relevant": false
+                },
+                "position": {
+                  "x": -2430,
+                  "y": 2410
+                },
+                "group": "nodes"
+              },
+              {
+                "V": 2,
+                "data": {
+                  "id": "20250716075943593666",
+                  "name": "l22",
+                  "title": "Camera sensor safety mechanism failure",
+                  "type": "be",
+                  "color": "",
+                  "tag_date": "",
+                  "description": "",
+                  "attributes": [],
+                  "memos": [],
+                  "parents": [
+                    "20250716075845091020"
+                  ],
+                  "distribution": "exponential",
+                  "rate": "1",
+                  "string": "Exp (λ: 1)",
+                  "dorm": "0",
+                  "toplevel": false,
+                  "relevant": false
+                },
+                "position": {
+                  "x": -2190,
+                  "y": 2410
+                },
+                "group": "nodes"
+              },
+              {
+                "V": 2,
+                "data": {
+                  "id": "20250716080103590498",
+                  "name": "l23",
+                  "title": "Power supply failure",
+                  "type": "spare",
+                  "color": "",
+                  "tag_date": "",
+                  "description": "",
+                  "attributes": [],
+                  "memos": [],
+                  "parents": [
+                    "20250716073649216769",
+                    "20250716074752849275",
+                    "20250716075848177517"
+                  ],
+                  "children": [
+                    "20250716080906392887",
+                    "20250716080907783922",
+                    "20250716080918073687"
+                  ],
+                  "toplevel": false,
+                  "relevant": false
+                },
+                "position": {
+                  "x": -490,
+                  "y": 2390
+                },
+                "group": "nodes"
+              },
+              {
+                "V": 2,
+                "data": {
+                  "id": "20250716080823294771",
+                  "name": "l24",
+                  "title": "Random hardware error",
+                  "type": "be",
+                  "color": "",
+                  "tag_date": "",
+                  "description": "",
+                  "attributes": [],
+                  "memos": [],
+                  "parents": [
+                    "20250716075848177517"
+                  ],
+                  "distribution": "exponential",
+                  "rate": "1",
+                  "string": "Exp (λ: 1)",
+                  "dorm": "0",
+                  "toplevel": false,
+                  "relevant": false
+                },
+                "position": {
+                  "x": -1950,
+                  "y": 2490
+                },
+                "group": "nodes"
+              },
+              {
+                "V": 2,
+                "data": {
+                  "id": "20250716080906392887",
+                  "name": "l25",
+                  "title": "Power1 down",
+                  "type": "be",
+                  "color": "",
+                  "tag_date": "",
+                  "description": "",
+                  "attributes": [],
+                  "memos": [],
+                  "parents": [
+                    "20250716080103590498"
+                  ],
+                  "distribution": "exponential",
+                  "rate": "1",
+                  "string": "Exp (λ: 1)",
+                  "dorm": "0",
+                  "toplevel": false,
+                  "relevant": false
+                },
+                "position": {
+                  "x": -710,
+                  "y": 2590
+                },
+                "group": "nodes"
+              },
+              {
+                "V": 2,
+                "data": {
+                  "id": "20250716080907783922",
+                  "name": "l26",
+                  "title": "Power2 down",
+                  "type": "be",
+                  "color": "",
+                  "tag_date": "",
+                  "description": "",
+                  "attributes": [],
+                  "memos": [],
+                  "parents": [
+                    "20250716080103590498"
+                  ],
+                  "distribution": "exponential",
+                  "rate": "1",
+                  "string": "Exp (λ: 1)",
+                  "dorm": "0",
+                  "toplevel": false,
+                  "relevant": false
+                },
+                "position": {
+                  "x": -490,
+                  "y": 2610
+                },
+                "group": "nodes"
+              },
+              {
+                "V": 2,
+                "data": {
+                  "id": "20250716080918073687",
+                  "name": "l27",
+                  "title": "Power3 down",
+                  "type": "be",
+                  "color": "",
+                  "tag_date": "",
+                  "description": "",
+                  "attributes": [],
+                  "memos": [],
+                  "parents": [
+                    "20250716080103590498"
+                  ],
+                  "distribution": "exponential",
+                  "rate": "1",
+                  "string": "Exp (λ: 1)",
+                  "dorm": "0",
+                  "toplevel": false,
+                  "relevant": false
+                },
+                "position": {
+                  "x": -270,
+                  "y": 2590
+                },
+                "group": "nodes"
+              },
+              {
+                "V": 2,
+                "data": {
+                  "id": "20250716081119179246",
+                  "name": "l28",
+                  "title": "Lane detection internal software error",
+                  "type": "be",
+                  "color": "",
+                  "tag_date": "",
+                  "description": "",
+                  "attributes": [],
+                  "memos": [],
+                  "parents": [
+                    "20250716075126313716"
+                  ],
+                  "distribution": "probability",
+                  "prob": "0.01",
+                  "string": "ρ: 0.01",
+                  "dorm": "0",
+                  "toplevel": false,
+                  "relevant": false
+                },
+                "position": {
+                  "x": -1550,
+                  "y": 2250
+                },
+                "group": "nodes"
+              },
+              {
+                "V": 2,
+                "data": {
+                  "id": "20250716081120408212",
+                  "name": "l29",
+                  "title": "Lane detection safety mechanism failure",
+                  "type": "be",
+                  "color": "",
+                  "tag_date": "",
+                  "description": "",
+                  "attributes": [],
+                  "memos": [],
+                  "parents": [
+                    "20250716075126313716"
+                  ],
+                  "distribution": "exponential",
+                  "rate": "1",
+                  "string": "Exp (λ: 1)",
+                  "dorm": "0",
+                  "toplevel": false,
+                  "relevant": false
+                },
+                "position": {
+                  "x": -1290,
+                  "y": 2250
+                },
+                "group": "nodes"
+              },
+              {
+                "V": 2,
+                "data": {
+                  "id": "20250716081257232361",
+                  "name": "l30",
+                  "title": "",
+                  "type": "fdep",
+                  "color": "",
+                  "tag_date": "",
+                  "description": "",
+                  "attributes": [],
+                  "memos": [],
+                  "parents": [],
+                  "children": [
+                    "20250716074752849275",
+                    "20250716075131713513"
+                  ]
+                },
+                "position": {
+                  "x": -850,
+                  "y": 1750
+                },
+                "group": "nodes"
+              },
+              {
+                "V": 2,
+                "data": {
+                  "id": "20250716081546695846",
+                  "name": "l31",
+                  "title": "Driver input safety mechanism failure",
+                  "type": "be",
+                  "color": "",
+                  "tag_date": "",
+                  "description": "",
+                  "attributes": [],
+                  "memos": [],
+                  "parents": [
+                    "20250716074942361873"
+                  ],
+                  "distribution": "exponential",
+                  "rate": "1",
+                  "string": "Exp (λ: 1)",
+                  "dorm": "0",
+                  "toplevel": false,
+                  "relevant": false
+                },
+                "position": {
+                  "x": -1310,
+                  "y": 1710
+                },
+                "group": "nodes"
+              },
+              {
+                "V": 2,
+                "data": {
+                  "id": "20250716081551278585",
+                  "name": "l32",
+                  "title": "Incorrect driver input signal",
+                  "type": "or",
+                  "color": "",
+                  "tag_date": "",
+                  "description": "",
+                  "attributes": [],
+                  "memos": [],
+                  "parents": [
+                    "20250716074942361873"
+                  ],
+                  "children": [
+                    "20250716081650474490",
+                    "20250716081648333731"
+                  ],
+                  "toplevel": false,
+                  "relevant": false
+                },
+                "position": {
+                  "x": -1650,
+                  "y": 1710
+                },
+                "group": "nodes"
+              },
+              {
+                "V": 2,
+                "data": {
+                  "id": "20250716081648333731",
+                  "name": "l33",
+                  "title": "Driver override failure",
+                  "type": "be",
+                  "color": "",
+                  "tag_date": "",
+                  "description": "",
+                  "attributes": [],
+                  "memos": [],
+                  "parents": [
+                    "20250716081551278585"
+                  ],
+                  "distribution": "exponential",
+                  "rate": "1",
+                  "string": "Exp (λ: 1)",
+                  "dorm": "0",
+                  "toplevel": false,
+                  "relevant": false
+                },
+                "position": {
+                  "x": -1390,
+                  "y": 1870
+                },
+                "group": "nodes"
+              },
+              {
+                "V": 2,
+                "data": {
+                  "id": "20250716081650474490",
+                  "name": "l34",
+                  "title": "Turn signal indicator failure",
+                  "type": "be",
+                  "color": "",
+                  "tag_date": "",
+                  "description": "",
+                  "attributes": [],
+                  "memos": [],
+                  "parents": [
+                    "20250716081551278585"
+                  ],
+                  "distribution": "exponential",
+                  "rate": "1",
+                  "string": "Exp (λ: 1)",
+                  "dorm": "0",
+                  "toplevel": false,
+                  "relevant": false
+                },
+                "position": {
+                  "x": -1650,
+                  "y": 1870
+                },
+                "group": "nodes"
+              },
+              {
+                "V": 2,
+                "data": {
+                  "id": "20250716081833662648",
+                  "name": "l35",
+                  "title": "LDW logic internal software error",
+                  "type": "be",
+                  "color": "",
+                  "tag_date": "",
+                  "description": "",
+                  "attributes": [],
+                  "memos": [],
+                  "parents": [
+                    "20250716074756713268"
+                  ],
+                  "distribution": "exponential",
+                  "rate": "1",
+                  "string": "Exp (λ: 1)",
+                  "dorm": "0",
+                  "toplevel": false,
+                  "relevant": false
+                },
+                "position": {
+                  "x": -1130,
+                  "y": 1490
+                },
+                "group": "nodes"
+              },
+              {
+                "V": 2,
+                "data": {
+                  "id": "20250716081834336087",
+                  "name": "l36",
+                  "title": "LDW logic safety mechanism failure",
+                  "type": "be",
+                  "color": "",
+                  "tag_date": "",
+                  "description": "",
+                  "attributes": [],
+                  "memos": [],
+                  "parents": [
+                    "20250716074756713268"
+                  ],
+                  "distribution": "exponential",
+                  "rate": "1",
+                  "string": "Exp (λ: 1)",
+                  "dorm": "0",
+                  "toplevel": false,
+                  "relevant": false
+                },
+                "position": {
+                  "x": -890,
+                  "y": 1490
+                },
+                "group": "nodes"
+              },
+              {
+                "V": 2,
+                "data": {
+                  "id": "20250716082009768355",
+                  "name": "l37",
+                  "title": "Random hardware error",
+                  "type": "be",
+                  "color": "",
+                  "tag_date": "",
+                  "description": "",
+                  "attributes": [],
+                  "memos": [],
+                  "parents": [
+                    "20250716074752849275"
+                  ],
+                  "distribution": "exponential",
+                  "rate": "1",
+                  "string": "Exp (λ: 1)",
+                  "dorm": "0",
+                  "toplevel": false,
+                  "relevant": false
+                },
+                "position": {
+                  "x": -250,
+                  "y": 1490
+                },
+                "group": "nodes"
+              },
+              {
+                "V": 2,
+                "data": {
+                  "id": "20250716082240788913",
+                  "name": "l38",
+                  "title": "Power steering ECU internal software error",
+                  "type": "be",
+                  "color": "",
+                  "tag_date": "",
+                  "description": "",
+                  "attributes": [],
+                  "memos": [],
+                  "parents": [
+                    "20250716073652880720"
+                  ],
+                  "distribution": "probability",
+                  "prob": "0.01",
+                  "string": "ρ: 0.01",
+                  "dorm": "0",
+                  "toplevel": false,
+                  "relevant": false
+                },
+                "position": {
+                  "x": -710,
+                  "y": 1010
+                },
+                "group": "nodes"
+              },
+              {
+                "V": 2,
+                "data": {
+                  "id": "20250716082241455582",
+                  "name": "l39",
+                  "title": "Power steering ECU safety mechanism failure",
+                  "type": "be",
+                  "color": "",
+                  "tag_date": "",
+                  "description": "",
+                  "attributes": [],
+                  "memos": [],
+                  "parents": [
+                    "20250716073652880720"
+                  ],
+                  "distribution": "exponential",
+                  "rate": "1",
+                  "string": "Exp (λ: 1)",
+                  "dorm": "0",
+                  "toplevel": false,
+                  "relevant": false
+                },
+                "position": {
+                  "x": -290,
+                  "y": 1010
+                },
+                "group": "nodes"
+              },
+              {
+                "V": 2,
+                "data": {
+                  "id": "20250716082529274181",
+                  "name": "l40",
+                  "title": "Random hardware error",
+                  "type": "be",
+                  "color": "",
+                  "tag_date": "",
+                  "description": "",
+                  "attributes": [],
+                  "memos": [],
+                  "parents": [
+                    "20250716073649216769"
+                  ],
+                  "distribution": "exponential",
+                  "rate": "1",
+                  "string": "Exp (λ: 1)",
+                  "dorm": "0",
+                  "toplevel": false,
+                  "relevant": false
+                },
+                "position": {
+                  "x": 250,
+                  "y": 950
+                },
+                "group": "nodes"
+              }
+            ],
+            "toplevel": "20250716073531000084"
+          }
+        }
+      ],
+      "quantifiable_states": [],
+      "basic_quantifiable_states": [
+        {
+          "id": "system_failed",
+          "name": "system_failed",
+          "expression": "Root Element (Default)",
+          "description": "Root element of the fault tree.",
+          "element_id": "system_failed"
+        }
+      ],
+      "ccf_groups": [],
+      "failure_dependencies": [],
+      "initial_conditions": [],
+      "default_initial_condition": null
+    }
+  ],
+  "parameter_sets": [],
+  "failure_event_sets": [],
+  "attribute_sets": [],
+  "metrics": [],
+  "reward_sets": [],
+  "consequence_sets": [
+    {
+      "V": 2,
+      "id": "20241121142922267295",
+      "name": "consequence_set_1",
+      "memos": [],
+      "description": "",
+      "consequences": [
+        {
+          "V": 2,
+          "id": "consequence_1",
+          "name": "consequence_1",
+          "description": ""
+        },
+        {
+          "V": 2,
+          "id": "consequence_2",
+          "name": "consequence_2",
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "event_trees": [
+    {
+      "V": 2,
+      "id": "20241121142922267296",
+      "version": "",
+      "author": "",
+      "description": "",
+      "name": "event_tree_1",
+      "memos": [],
+      "reward_set": "",
+      "consequence_set": "20241121142922267295",
+      "declaration_set": "",
+      "failure_event_set": "",
+      "initial_node_name": "start",
+      "source": "initial_inter_node",
+      "target": "initial_end_node",
+      "type": "start_edge",
+      "probability": 1,
+      "frequency": "1",
+      "event_type": "internal",
+      "event_name": "Accident",
+      "complement": false,
+      "graph": {
+        "V": 2,
+        "id": "20241121142922267296",
+        "name": "Event Tree",
+        "nodes": [
+          {
+            "V": 2,
+            "id": "initial_inter_node",
+            "outgoing": [
+              "initial_end_node"
+            ],
+            "incoming": [],
+            "initial": true,
+            "type": "inter_node"
+          },
+          {
+            "V": 2,
+            "id": "initial_end_node",
+            "outgoing": [],
+            "incoming": [
+              "initial_inter_node"
+            ],
+            "initial": true,
+            "type": "end_node",
+            "name": "start",
+            "title": "start",
+            "color": "",
+            "tag_date": "",
+            "rewards": []
+          }
+        ],
+        "edges": [
+          {
+            "V": 2,
+            "id": "start_edge",
+            "source": "initial_inter_node",
+            "target": "initial_end_node",
+            "type": "start_edge",
+            "probability": 1,
+            "frequency": "1",
+            "event_type": "internal",
+            "event_name": "Accident",
+            "complement": false
+          }
+        ],
+        "graphs": []
+      }
+    }
+  ],
+  "declaration_sets": [],
+  "memos": []
+}
